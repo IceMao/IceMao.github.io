@@ -53,7 +53,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="javascript," />
+  <meta name="keywords" content="-css," />
 
 
 
@@ -69,18 +69,20 @@
 
 
 
-<meta name="description" content="ES5非严格模式严格模式1234567&amp;apos;use strict&amp;apos;function thisFn() &amp;#123;  console.info(&amp;apos;this&amp;apos;,this);&amp;#125;;thisFn();//">
-<meta name="keywords" content="javascript">
+<meta name="description" content="应用场景 待办事项列表 电话簿列表 滑动一定距离之后使导航条nav固定在顶部">
+<meta name="keywords" content="-css">
 <meta property="og:type" content="article">
-<meta property="og:title" content="this的作用域">
-<meta property="og:url" content="http://yoursite.com/2017/09/18/this的作用域/index.html">
+<meta property="og:title" content="CSS3粘性布局-stiky">
+<meta property="og:url" content="http://yoursite.com/2017/10/19/CSS3粘性布局-stiky/index.html">
 <meta property="og:site_name" content="Ice">
-<meta property="og:description" content="ES5非严格模式严格模式1234567&amp;apos;use strict&amp;apos;function thisFn() &amp;#123;  console.info(&amp;apos;this&amp;apos;,this);&amp;#125;;thisFn();//">
+<meta property="og:description" content="应用场景 待办事项列表 电话簿列表 滑动一定距离之后使导航条nav固定在顶部">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-09-18T09:32:57.508Z">
+<meta property="og:image" content="http://hexoblog-1251943703.cossh.myqcloud.com/postImg/Chrome-flags.png">
+<meta property="og:updated_time" content="2017-10-19T09:57:15.193Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="this的作用域">
-<meta name="twitter:description" content="ES5非严格模式严格模式1234567&amp;apos;use strict&amp;apos;function thisFn() &amp;#123;  console.info(&amp;apos;this&amp;apos;,this);&amp;#125;;thisFn();//">
+<meta name="twitter:title" content="CSS3粘性布局-stiky">
+<meta name="twitter:description" content="应用场景 待办事项列表 电话簿列表 滑动一定距离之后使导航条nav固定在顶部">
+<meta name="twitter:image" content="http://hexoblog-1251943703.cossh.myqcloud.com/postImg/Chrome-flags.png">
 
 
 
@@ -110,13 +112,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/09/18/this的作用域/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/10/19/CSS3粘性布局-stiky/"/>
 
 
 
 
 
-  <title>this的作用域 | Ice</title>
+  <title>CSS3粘性布局-stiky | Ice</title>
   
 
 
@@ -253,7 +255,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/18/this的作用域/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/19/CSS3粘性布局-stiky/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ice">
@@ -270,7 +272,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">this的作用域</h1>
+          <h1 class="post-title" itemprop="name headline">CSS3粘性布局-stiky</h1>
         
 
         <div class="post-meta">
@@ -282,8 +284,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-18T17:01:01+08:00">
-                2017-09-18
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-19T16:10:38+08:00">
+                2017-10-19
               </time>
             
 
@@ -292,6 +294,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/Css/" itemprop="url" rel="index">
+                    <span itemprop="name">Css</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -320,9 +344,33 @@
       
 
       
-        <h2 id="ES5"><a href="#ES5" class="headerlink" title="ES5"></a>ES5</h2><h3 id="非严格模式"><a href="#非严格模式" class="headerlink" title="非严格模式"></a>非严格模式</h3><h3 id="严格模式"><a href="#严格模式" class="headerlink" title="严格模式"></a>严格模式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;</div><div class="line"></div><div class="line">function thisFn() &#123;</div><div class="line">  console.info(&apos;this&apos;,this);</div><div class="line">&#125;;</div><div class="line"></div><div class="line">thisFn();//</div></pre></td></tr></table></figure>
+        <h2 id="应用场景"><a href="#应用场景" class="headerlink" title="应用场景"></a>应用场景</h2><ol>
+<li>待办事项列表</li>
+<li>电话簿列表</li>
+<li>滑动一定距离之后使导航条<code>nav</code>固定在顶部</li>
+</ol>
 <a id="more"></a>
-<h2 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h2><p> 调用者的作用域</p>
+<h2 id="常规方法"><a href="#常规方法" class="headerlink" title="常规方法"></a>常规方法</h2><p>用<code>js</code>监听页面的滚动距离,判断每一区块距离视口顶部距离，超过了则设定该区块<code>position:fixed</code>，反之去掉。</p>
+<h2 id="position-sticky"><a href="#position-sticky" class="headerlink" title="position:sticky"></a>position:sticky</h2><p><code>css3</code>中<code>position</code>新特性<code>sticky</code>, 存在兼容问题</p>
+<h4 id="sticky原理"><a href="#sticky原理" class="headerlink" title="sticky原理"></a>sticky原理</h4><p><code>sticky</code>可以认为是<code>relative</code>和<code>fixed</code>的结合。在超过规定阈值前是相对定位（<code>relative</code>），超过之后是固定定位（<code>fixed</code>）</p>
+<p>例如：设定阈值是 top:0 </p>
+<ol>
+<li>当元素距离页面视口（<code>Viewport</code>，也就是<code>fixed</code>定位的参照）顶部距离大于 0px 时，元素以 <code>relative</code> 定位表现</li>
+<li>当元素距离页面视口小于 0px 时，元素表现为 fixed 定位，也就会固定在顶部</li>
+</ol>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    position: -webkit-sticky;</div><div class="line">    position: sticky;</div><div class="line">    top: 0;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<h2 id="position-sticky-使用规则"><a href="#position-sticky-使用规则" class="headerlink" title="position:sticky 使用规则"></a>position:sticky 使用规则</h2><pre><code>1. 须指定top, right, bottom或left四个阈值其中之一，才可使粘性定位生效。否则其行为与相对定位相同。
+2. top和bottom同时设置时，top生效的优先级高
+3. left和right同时设置时，left的优先级高。
+3. 设定为position:sticky元素的任意父节点的overflow属性必须是visible，否则position:sticky不会生效。
+    a) 如果position:sticky元素的任意父节点定位设置为overflow:hidden，则父容器无法进行滚动，所以position:sticky 元素也不会有滚动然后固定的情况。
+    b) 如果position:sticky元素的任意父节点定位设置为position:relative | absolute | fixed，则元素相对父元素进行定位，而不会相对viewprot定位。达到设定的阀值。
+    c) 这个还算好理解，也就是设定了position:sticky的元素表现为relative还是fixed是根据元素是否达到设定了的阈值决定的。
+</code></pre><h2 id="兼容"><a href="#兼容" class="headerlink" title="兼容"></a>兼容</h2><ol>
+<li>除了Firefox， safari的其它浏览器 需要使用前缀</li>
+<li>chrome中可以有另一种方法实现兼容<br> a) <code>chrome</code>浏览器访问 <code>chrome://flags/</code><br> b) 启用实验性网络平台功能<span itemprop="image" itemscope="" itemtype="http://schema.org/ImageObject"><img itemprop="url image" src="http://hexoblog-1251943703.cossh.myqcloud.com/postImg/Chrome-flags.png" class="full-image" alt="alt" title="Chrome实验性网络平台"><meta itemprop="width" content="auto"><meta itemprop="height" content="auto"></span></li>
+<li>使用插件实现各浏览器兼容<br> <a href="https://github.com/filamentgroup/fixed-sticky" target="_blank" rel="external">https://github.com/filamentgroup/fixed-sticky</a></li>
+</ol>
 
       
     </div>
@@ -340,7 +388,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/javascript/" rel="tag"># javascript</a>
+            <a href="/tags/css/" rel="tag"># -css</a>
           
         </div>
       
@@ -353,8 +401,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/09/18/Javascript事件流/" rel="next" title="Javascript事件流">
-                <i class="fa fa-chevron-left"></i> Javascript事件流
+              <a href="/2017/09/25/关于javascript数字精度丢失/" rel="next" title="关于javascript数字精度丢失">
+                <i class="fa fa-chevron-left"></i> 关于javascript数字精度丢失
               </a>
             
           </div>
@@ -362,10 +410,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/09/25/关于javascript数字精度丢失/" rel="prev" title="关于javascript数字精度丢失">
-                关于javascript数字精度丢失 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -526,7 +570,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ES5"><span class="nav-number">1.</span> <span class="nav-text">ES5</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#非严格模式"><span class="nav-number">1.1.</span> <span class="nav-text">非严格模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#严格模式"><span class="nav-number">1.2.</span> <span class="nav-text">严格模式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ES6"><span class="nav-number">2.</span> <span class="nav-text">ES6</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#应用场景"><span class="nav-number">1.</span> <span class="nav-text">应用场景</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#常规方法"><span class="nav-number">2.</span> <span class="nav-text">常规方法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#position-sticky"><span class="nav-number">3.</span> <span class="nav-text">position:sticky</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#sticky原理"><span class="nav-number">3.0.1.</span> <span class="nav-text">sticky原理</span></a></li></ol></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#position-sticky-使用规则"><span class="nav-number">4.</span> <span class="nav-text">position:sticky 使用规则</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#兼容"><span class="nav-number">5.</span> <span class="nav-text">兼容</span></a></li></ol></div>
             
 
           </div>
