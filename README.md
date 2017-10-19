@@ -45,3 +45,12 @@ git add .
 git commit -m"message"
 git push
 ````
+## 项目迁移
+
+当需要迁移项目时：
+
+0. `clone`分支内容到本地
+1. `npm install` 安装依赖项
+2. `hexo server` 本地查看是否运行正常
+3. `hexo generate` 生成/渲染
+4. `hexo deploy` 部署到`github`
