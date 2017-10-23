@@ -53,7 +53,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="javascript," />
+  <meta name="keywords" content="-AI," />
 
 
 
@@ -69,18 +69,21 @@
 
 
 
-<meta name="description" content="ES5非严格模式严格模式1234567&amp;apos;use strict&amp;apos;function thisFn() &amp;#123;  console.info(&amp;apos;this&amp;apos;,this);&amp;#125;;thisFn();//">
-<meta name="keywords" content="javascript">
+<meta name="description" content="AI小白，看到这个效果很不错，所以尝试学习，本文总结在实现过程中遇到的问题">
+<meta name="keywords" content="-AI">
 <meta property="og:type" content="article">
-<meta property="og:title" content="this的作用域">
-<meta property="og:url" content="http://yoursite.com/2017/09/18/this的作用域/index.html">
+<meta property="og:title" content="实践：用AI打造温暖的鹿形织物图标">
+<meta property="og:url" content="http://yoursite.com/2017/10/23/实践：用AI打造温暖的鹿形织物图标/index.html">
 <meta property="og:site_name" content="Ice">
-<meta property="og:description" content="ES5非严格模式严格模式1234567&amp;apos;use strict&amp;apos;function thisFn() &amp;#123;  console.info(&amp;apos;this&amp;apos;,this);&amp;#125;;thisFn();//">
+<meta property="og:description" content="AI小白，看到这个效果很不错，所以尝试学习，本文总结在实现过程中遇到的问题">
 <meta property="og:locale" content="en">
-<meta property="og:updated_time" content="2017-09-18T09:32:57.508Z">
+<meta property="og:image" content="http://hexoblog-1251943703.cossh.myqcloud.com/postImg/AI/deer.png">
+<meta property="og:image" content="http://hexoblog-1251943703.cossh.myqcloud.com/postImg/AI/objectExtension.png">
+<meta property="og:updated_time" content="2017-10-23T08:58:48.172Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="this的作用域">
-<meta name="twitter:description" content="ES5非严格模式严格模式1234567&amp;apos;use strict&amp;apos;function thisFn() &amp;#123;  console.info(&amp;apos;this&amp;apos;,this);&amp;#125;;thisFn();//">
+<meta name="twitter:title" content="实践：用AI打造温暖的鹿形织物图标">
+<meta name="twitter:description" content="AI小白，看到这个效果很不错，所以尝试学习，本文总结在实现过程中遇到的问题">
+<meta name="twitter:image" content="http://hexoblog-1251943703.cossh.myqcloud.com/postImg/AI/deer.png">
 
 
 
@@ -110,13 +113,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/09/18/this的作用域/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/10/23/实践：用AI打造温暖的鹿形织物图标/"/>
 
 
 
 
 
-  <title>this的作用域 | Ice</title>
+  <title>实践：用AI打造温暖的鹿形织物图标 | Ice</title>
   
 
 
@@ -253,7 +256,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/18/this的作用域/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/10/23/实践：用AI打造温暖的鹿形织物图标/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Ice">
@@ -270,7 +273,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">this的作用域</h1>
+          <h1 class="post-title" itemprop="name headline">实践：用AI打造温暖的鹿形织物图标</h1>
         
 
         <div class="post-meta">
@@ -282,8 +285,8 @@
               
                 <span class="post-meta-item-text">Posted on</span>
               
-              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-09-18T17:01:01+08:00">
-                2017-09-18
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2017-10-23T16:56:27+08:00">
+                2017-10-23
               </time>
             
 
@@ -292,6 +295,28 @@
             
           </span>
 
+          
+            <span class="post-category" >
+            
+              <span class="post-meta-divider">|</span>
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-folder-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">In</span>
+              
+              
+                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
+                  <a href="/categories/AI/" itemprop="url" rel="index">
+                    <span itemprop="name">AI</span>
+                  </a>
+                </span>
+
+                
+                
+              
+            </span>
           
 
           
@@ -320,9 +345,33 @@
       
 
       
-        <h2 id="ES5"><a href="#ES5" class="headerlink" title="ES5"></a>ES5</h2><h3 id="非严格模式"><a href="#非严格模式" class="headerlink" title="非严格模式"></a>非严格模式</h3><h3 id="严格模式"><a href="#严格模式" class="headerlink" title="严格模式"></a>严格模式</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">&apos;use strict&apos;</div><div class="line"></div><div class="line">function thisFn() &#123;</div><div class="line">  console.info(&apos;this&apos;,this);</div><div class="line">&#125;;</div><div class="line"></div><div class="line">thisFn();//</div></pre></td></tr></table></figure>
+        <p>AI小白，看到这个效果很不错，所以尝试学习，本文总结在实现过程中遇到的问题</p>
+<p><img src="http://hexoblog-1251943703.cossh.myqcloud.com/postImg/AI/deer.png" alt="织物-鹿" title="织物-鹿"></p>
 <a id="more"></a>
-<h2 id="ES6"><a href="#ES6" class="headerlink" title="ES6"></a>ES6</h2><p> 调用者的作用域</p>
+<p>教程参考原文：<br><a href="https://mp.weixin.qq.com/s/UUYvK36T3fu4KokKj7lQkg" title="用AI打造温暖的鹿形织物图标" target="_blank" rel="external">用AI打造温暖的鹿形织物图标</a> </p>
+<h2 id="实践过程中遇到的点"><a href="#实践过程中遇到的点" class="headerlink" title="实践过程中遇到的点"></a>实践过程中遇到的点</h2><h4 id="1-对称变换"><a href="#1-对称变换" class="headerlink" title="1. 对称变换"></a>1. 对称变换</h4><p><strong>步骤</strong>：原文 <code>STEP 06</code></p>
+<blockquote>
+<p>将所绘制对象编组进行复制并对称变换…</p>
+</blockquote>
+<p><strong>问题</strong>: 按照文章,复制并对称变换时，发现并没有实现对称变换，不知道为什么..</p>
+<p><strong>解决</strong>：用了笨方法- - 复制相同的椭圆 按<code>STEP 01-05</code> 做了对称的图形</p>
+<h4 id="2-扩展对象"><a href="#2-扩展对象" class="headerlink" title="2. 扩展对象"></a>2. 扩展对象</h4><p><strong>步骤</strong>：原文 <code>STEP 11</code></p>
+<blockquote>
+<p>将【STEP 09】中所扩展以后的对象取消编组（选中后连续进行两次取消编组），直至它能分别独立出一个个基础形。</p>
+</blockquote>
+<p><strong>问题</strong>: 刚做的时候认为这里说的 <strong>扩展以后的对象</strong> 指的是在 <code>STEP 09 - 10</code>变换效果添加的对象,但是发现那些“批量生产”出来的图形无法选中…</p>
+<p><strong>解决</strong>：由于网上没有查到，询问时了解</p>
+<blockquote>
+<p>效果只是潜在的对象，扩展外观后才是对象</p>
+</blockquote>
+<p>发现 此 <strong>扩展以后的对象</strong> 非彼 <strong>扩展以后的对象</strong> 。</p>
+<p><strong>解决过程</strong>：<strong>选中对象</strong> , <strong>菜单</strong> -&gt; <strong>对象</strong> -&gt; <strong>扩展对象</strong> 选中后，此时所有的图形都是真实存在的对象了。</p>
+<p> 然后右键 <strong>取消编组连续两次</strong> ，就可以发现 图层列表中出现了所有的“图形元素”</p>
+<p> <em>注：这里的 <strong>取消编组连续两次</strong> 是因为在 <code>STEP 09 - 10</code> 变幻效果中分别在水平和垂直方向设置了两次。</em></p>
+<p><img src="http://hexoblog-1251943703.cossh.myqcloud.com/postImg/AI/objectExtension.png" alt="编组取消后" title="编组取消后"></p>
+<h4 id="3-阴影"><a href="#3-阴影" class="headerlink" title="3. 阴影"></a>3. 阴影</h4><p><strong>步骤</strong>：在完成后，想让图像更立体</p>
+<p><strong>问题</strong>: 本想用 <code>3D</code> 效果但是很卡.. 改用投影</p>
+<p><strong>解决</strong>：<strong>菜单</strong> -&gt; <strong>效果</strong> -&gt; <strong>风格化</strong> -&gt; <strong>投影</strong> 设置想要的偏移和模糊度</p>
 
       
     </div>
@@ -340,7 +389,7 @@
       
         <div class="post-tags">
           
-            <a href="/tags/javascript/" rel="tag"># javascript</a>
+            <a href="/tags/AI/" rel="tag"># -AI</a>
           
         </div>
       
@@ -353,8 +402,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/09/18/Javascript事件流/" rel="next" title="Javascript事件流">
-                <i class="fa fa-chevron-left"></i> Javascript事件流
+              <a href="/2017/10/19/CSS3粘性布局-stiky/" rel="next" title="CSS3粘性布局-stiky">
+                <i class="fa fa-chevron-left"></i> CSS3粘性布局-stiky
               </a>
             
           </div>
@@ -362,10 +411,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/09/25/关于javascript数字精度丢失/" rel="prev" title="关于javascript数字精度丢失">
-                关于javascript数字精度丢失 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -526,7 +571,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#ES5"><span class="nav-number">1.</span> <span class="nav-text">ES5</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#非严格模式"><span class="nav-number">1.1.</span> <span class="nav-text">非严格模式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#严格模式"><span class="nav-number">1.2.</span> <span class="nav-text">严格模式</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#ES6"><span class="nav-number">2.</span> <span class="nav-text">ES6</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#实践过程中遇到的点"><span class="nav-number">1.</span> <span class="nav-text">实践过程中遇到的点</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#1-对称变换"><span class="nav-number">1.0.1.</span> <span class="nav-text">1. 对称变换</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-扩展对象"><span class="nav-number">1.0.2.</span> <span class="nav-text">2. 扩展对象</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#3-阴影"><span class="nav-number">1.0.3.</span> <span class="nav-text">3. 阴影</span></a></li></ol></li></ol></li></ol></div>
             
 
           </div>
